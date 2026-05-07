@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Power of Oil & Natural Gas in the Middle East</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    background-color: #333333;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline;
+    margin-right: 20px;
+  }
+
+  .nav-links {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li {
+    display: inline;
+    margin-right: 5px;
+  }
+
+  .nav-links li a {
+    color: #cccccc;
+    text-decoration: none;
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
+  .page { display: none; padding-top: 50px; min-height: 100vh; }
+  .page.active { display: block; }
+
+  .hero {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 40px 30px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .hero-kicker {
+    font-size: 12px;
+    color: #aaaaaa;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    color: #cccccc;
+    max-width: 620px;
+  }
+
+  .hero-ornament { display: none; }
+
+  .page-header {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 30px;
+  }
+
+  .page-num {
+    font-size: 12px;
+    color: #aaaaaa;
+    margin-bottom: 6px;
+  }
+
+  .page-header h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .page-header p {
+    font-size: 14px;
+    color: #cccccc;
+  }
+
+  .page-header-inner { max-width: 860px; }
+
+  .content {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  .content-wide {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  .section { margin-bottom: 30px; }
+
+  .section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #888888;
+    margin-bottom: 4px;
+  }
+
+  .section h2 {
+    font-size: 20px;
+    color: #222222;
+    margin-bottom: 8px;
+  }
+
+  .section-rule {
+    border: none;
+    border-top: 1px solid #cccccc;
+    margin-bottom: 14px;
+  }
+
+  .section p {
+    color: #333333;
+    margin-bottom: 12px;
+  }
+
+  .pullquote {
+    border-left: 4px solid #888888;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+  }
+
+  .pullquote p {
+    font-style: italic;
+    font-size: 17px;
+    color: #333333;
+    margin: 0;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #666666;
+    font-style: normal;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #cccccc;
+    margin: 24px 0;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .stat-card {
+    background-color: #f0f0f0;
+    border: 1px solid #cccccc;
+    padding: 16px;
+  }
+
+  .stat-num {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222222;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: #555555;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 16px;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    background-color: #f9f9f9;
+  }
+
+  .card-tag {
+    font-size: 11px;
+    color: #888888;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+
+  .card h3 {
+    font-size: 16px;
+    color: #222222;
+    margin-bottom: 6px;
+  }
+
+  .card p {
+    font-size: 13px;
+    color: #555555;
+    margin: 0;
+  }
+
+  .video-wrap {
+    margin: 20px 0;
+    border: 1px solid #cccccc;
+  }
+
+  .video-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #555555;
+    padding: 6px 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  .video-wrap iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+    display: block;
+  }
+
+  .video-caption {
+    padding: 6px 10px;
+    font-size: 12px;
+    color: #666666;
+    background-color: #f0f0f0;
+    border-top: 1px solid #cccccc;
+  }
+
+  .bib-section { margin-bottom: 24px; }
+
+  .bib-section-title {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #444444;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 14px;
+  }
+
+  .bib-entry {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .bib-entry:last-child { border-bottom: none; }
+
+  .bib-num {
+    font-size: 13px;
+    font-weight: bold;
+    color: #666666;
+    min-width: 24px;
+  }
+
+  .bib-text { flex: 1; }
+
+  .bib-text p {
+    font-size: 14px;
+    color: #333333;
+    margin: 0 0 4px;
+  }
+
+  .bib-text a {
+    font-size: 13px;
+    color: #0066cc;
+    word-break: break-all;
+  }
+
+  .bib-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 1px 5px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  .bib-note {
+    background-color: #f5f5f5;
+    border-left: 3px solid #aaaaaa;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #555555;
+    margin-top: 12px;
+  }
+
+  .resource-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .resource-card {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 14px;
+  }
+
+  .resource-type {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #888888;
+    margin-bottom: 4px;
+  }
+
+  .resource-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #222222;
+    margin-bottom: 4px;
+  }
+
+  .resource-meta {
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 6px;
+  }
+
+  .resource-desc {
+    font-size: 13px;
+    color: #444444;
+    margin-bottom: 8px;
+  }
+
+  .resource-link {
+    font-size: 13px;
+    color: #0066cc;
+    text-decoration: none;
+  }
+
+  .resource-link:hover { text-decoration: underline; }
+
+  .book-entry {
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .book-entry:last-child { border-bottom: none; }
+
+  .book-title {
+    font-style: italic;
+    font-size: 15px;
+    color: #222222;
+    font-weight: bold;
+  }
+
+  .book-author {
+    font-size: 13px;
+    color: #555555;
+    margin-top: 2px;
+  }
+
+  footer {
+    background-color: #333333;
+    color: #cccccc;
+    padding: 16px 30px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 700px) {
+    .cards-grid, .resource-grid, .stats-row { grid-template-columns: 1fr; }
+    .hero, .page-header, .content, .content-wide, footer { padding: 20px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo" onclick="show('home')">Oil &amp; Gas<br>in the Middle East</div>
+  <ul class="nav-links">
+    <li><a href="#" onclick="show('home')" id="nav-home" class="active">Home</a></li>
+    <li><a href="#" onclick="show('p1')" id="nav-p1">Discovery</a></li>
+    <li><a href="#" onclick="show('p2')" id="nav-p2">Economics</a></li>
+    <li><a href="#" onclick="show('p3')" id="nav-p3">Politics</a></li>
+    <li><a href="#" onclick="show('bib')" id="nav-bib">Bibliography</a></li>
+    <li><a href="#" onclick="show('extra')" id="nav-extra">Extra Resources</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════ HOME ══════════ -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="hero-ornament">&#9676;</div>
+    <div class="hero-inner">
+      <div class="hero-kicker">Research Project</div>
+      <h1>The Power of <em>Oil and Natural Gas</em><br>in the Middle East</h1>
+      <p class="hero-sub">How a single resource beneath the desert floor reshaped the economies, governments, and geopolitics of an entire region — and the world that depends on it.</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section">
+      <div class="section-label">About This Website</div>
+      <h2>Overview</h2>
+      <div class="section-rule"></div>
+      <p>Few resources have done more to reshape the modern world than the oil and natural gas found beneath the deserts of the Middle East. Since the first commercial discovery in Persia in 1908, hydrocarbons have transformed the region from a patchwork of agrarian and imperial territories into one of the most geopolitically significant areas on Earth.</p>
+      <p>This website examines that transformation across three interconnected dimensions. The first page explores where oil and gas are found, how they were discovered, and how extraction processes have evolved over a century. The second examines their economic importance — how petrodollars financed some of the fastest modernization in history, while also creating the structural vulnerabilities economists call the "resource curse." The third page turns to politics, tracing how control over oil has shaped governments, regional rivalries, and the foreign policies of the world's most powerful nations — from the 1973 Arab oil embargo to contemporary debates about the energy transition.</p>
+      <p>Together, these pages offer a comprehensive introduction to one of the defining stories of the twentieth and twenty-first centuries — a story that is far from over.</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="section-label">Explore the Site</div>
+    <div class="cards-grid">
+      <div class="card" onclick="show('p1')">
+        <div class="card-tag">Page 1</div>
+        <h3>Discovery &amp; Extraction</h3>
+        <p>From the 1908 Masjid-i-Sulaiman strike to the vast infrastructure of modern drilling, refining, and transport.</p>
+      </div>
+      <div class="card" onclick="show('p2')">
+        <div class="card-tag">Page 2</div>
+        <h3>Economic Importance</h3>
+        <p>How petrodollars funded rapid modernization — and created the vulnerabilities of the rentier state and the resource curse.</p>
+      </div>
+      <div class="card" onclick="show('p3')">
+        <div class="card-tag">Page 3</div>
+        <h3>Political Power &amp; Global Influence</h3>
+        <p>OPEC, the 1973 embargo, foreign intervention, and what the energy transition means for the region's leverage.</p>
+      </div>
+      <div class="card" onclick="show('bib')">
+        <div class="card-tag">Bibliography &amp; Resources</div>
+        <h3>Sources &amp; Further Reading</h3>
+        <p>Twelve academic sources, documentary films, journalism, and book recommendations for deeper study.</p>
+      </div>
+    </div>
+
+    <div class="video-wrap">
+      <div class="video-label">Featured Documentary</div>
+      <iframe src="https://www.youtube.com/embed/FMEw6hTSF0o" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="How the Modern Middle East Was Created"></iframe>
+      <div class="video-caption">How the Modern Middle East Was Created — History Documentary (2020)</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-title">The Power of Oil &amp; Natural Gas in the Middle East</div>
+    <div class="footer-note">All sources listed on the Bibliography page &middot; Images used under Creative Commons or public domain</div>
+  </footer>
+</div>
+
+<!-- ══════════ PAGE 1: DISCOVERY ══════════ -->
+<div class="page" id="page-p1">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="page-num">Page 1 of 3</div>
+      <h1>Locations, Discovery, and Extraction</h1>
+      <p>From Persia, 1908, to the global energy network — how oil was found, extracted, and how it remade the map.</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section">
+      <div class="section-label">Section 1</div>
+      <h2>The Birth of Middle Eastern Oil, 1901–1913</h2>
+      <div class="section-rule"></div>
+      <p>The discovery of oil in the Middle East began not with a grand plan but with the persistence of one man and the desperation of a nearly bankrupt venture. In 1901, Persian ruler Mozaffar od-Din Shah sold exploration rights to William Knox D'Arcy, a British entrepreneur who had made his fortune in Australian gold mining. D'Arcy's teams spent years drilling in the harsh terrain of the Zagros mountains, battling extreme heat, disease, and repeated failure.</p>
+      <p>Funding was almost exhausted when, on May 26, 1908, oil was struck at well No. 1 at Masjid-i-Sulaiman in southwestern Persia — modern-day Iran — at a depth of 1,180 feet. Historians of the oil industry have called this moment "the birthday of the oil fields of the Middle East." The following year, the Anglo-Persian Oil Company (APOC) was founded to develop the find commercially, beginning volume production by 1913.</p>
+      <p>Critically, the British Royal Navy — then led by Winston Churchill — converted its fleet from coal to oil and became APOC's largest customer, embedding imperial strategic interest into the business from the outset. This set a pattern that would define the region for the next century: oil as a resource inseparable from foreign power.</p>
+    </div>
+
+    <div class="pullquote">
+      <p>"On May 26, 1908, oil was struck at Masjid-i-Sulaiman — the birthday of the oil fields of the Middle East."</p>
+      <cite>— World Petroleum Congress, WPC-5805</cite>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Section 2</div>
+      <h2>Geography and Geology of Reserves</h2>
+      <div class="section-rule"></div>
+      <p>The extraordinary concentration of oil and gas in the Middle East is a product of geology spanning hundreds of millions of years. The region sits above some of Earth's largest sedimentary basins — ancient shallow seabeds where marine organisms accumulated, died, and were compressed under rock into the hydrocarbon deposits we extract today.</p>
+      <p>Saudi Arabia's Ghawar field, stretching 280 kilometers across the Eastern Province, is the largest conventional oil field ever discovered and has produced more oil than any other single reservoir in history. Qatar, despite being one of the world's smallest countries by area, sits above the North Dome / South Pars reservoir — the world's largest single natural gas field, shared across its maritime border with Iran. The region as a whole holds approximately 48 percent of the world's total proved oil reserves, with major concentrations in Saudi Arabia, Iran, Iraq, Kuwait, the UAE, and Qatar.</p>
+      <p>This geological inheritance gave the Middle East a structural role in global energy markets that no other region could match, and that role has underpinned its geopolitical importance ever since.</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-num">48%</div>
+        <div class="stat-label">of world's total proved oil reserves in the Middle East</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">280 km</div>
+        <div class="stat-label">Length of Saudi Arabia's Ghawar field — largest ever found</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1908</div>
+        <div class="stat-label">Year of the first commercial oil discovery at Masjid-i-Sulaiman, Iran</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Section 3</div>
+      <h2>Extraction, Infrastructure, and Urban Transformation</h2>
+      <div class="section-rule"></div>
+      <p>The processes of extracting oil and gas evolved dramatically across the twentieth century. Early onshore drilling used cable-tool rigs in shallow formations; by mid-century, rotary drilling and seismic surveying allowed access to deeper, more complex reservoirs. Offshore platforms extended extraction into the Persian Gulf. Once extracted, crude oil must be refined — cracked and distilled into gasoline, diesel, jet fuel, and the petrochemical feedstocks used in plastics and fertilizers.</p>
+      <p>Transportation infrastructure became equally vital: the Trans-Arabian Pipeline and vast supertanker fleets moved crude across continents, while the Strait of Hormuz — through which roughly 20 percent of the world's traded oil passes — became one of the most strategically critical waterways on Earth.</p>
+      <p>The human geography of the region was transformed almost beyond recognition. Cities like Dhahran, Abu Dhabi, and Doha grew directly from the logistical needs of the oil industry, their populations swelling with migrant workers — primarily from South Asia — drawn by the labor demands of rapid construction and extraction. Today, foreign nationals make up more than 85 percent of the population in Qatar and the UAE, a direct demographic consequence of oil-driven development.</p>
+    </div>
+
+    <div class="video-wrap">
+      <div class="video-label">Related Documentary</div>
+      <iframe src="https://www.youtube.com/embed/tjnBmH8b0Ko" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="How the First World War Created the Middle East Conflicts"></iframe>
+      <div class="video-caption">How the First World War Created the Middle East Conflicts — The Great War (2023)</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-title">The Power of Oil &amp; Natural Gas in the Middle East</div>
+    <div class="footer-note">Page 1 of 3 &middot; Discovery &amp; Extraction</div>
+  </footer>
+</div>
+
+<!-- ══════════ PAGE 2: ECONOMICS ══════════ -->
+<div class="page" id="page-p2">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="page-num">Page 2 of 3</div>
+      <h1>Economic Importance and Uses</h1>
+      <p>Petrodollars, rapid modernization, the rentier state — and the structural vulnerabilities that come with it.</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-num">70%</div>
+        <div class="stat-label">of Gulf government budgets funded by oil &amp; gas exports on average</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">95%</div>
+        <div class="stat-label">of Iraq's total export revenues derived from oil</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">30%</div>
+        <div class="stat-label">of Kuwait's GDP lost when oil prices crashed in 2014</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Section 1</div>
+      <h2>Global Uses and Everyday Dependence</h2>
+      <div class="section-rule"></div>
+      <p>Oil and natural gas from the Middle East do not merely fuel cars and heat homes — they are embedded in virtually every dimension of modern industrial life. Petroleum derivatives power the global transportation network: aviation fuel for airlines, diesel for shipping containers that carry 80 percent of world trade, and gasoline for the 1.4 billion passenger vehicles on the world's roads.</p>
+      <p>Beyond fuel, oil is the feedstock for petrochemical industries that produce plastics, synthetic fertilizers that feed roughly half the global population, pharmaceuticals, pesticides, and thousands of everyday products. Natural gas, meanwhile, has become the world's fastest-growing fossil fuel: cleaner than coal for electricity generation, essential for industrial heat, and increasingly traded as liquefied natural gas (LNG) to markets in Asia and Europe.</p>
+      <p>The Middle East and North Africa together account for approximately two-thirds of the world's proved oil reserves, making the region's production decisions central to global energy prices and, by extension, to inflation, economic growth, and geopolitical stability worldwide. When the price of a barrel of crude rises or falls sharply in Riyadh or Doha, the effects are felt at gas stations and factory gates from Dallas to Delhi.</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="section">
+      <div class="section-label">Section 2</div>
+      <h2>Modernization, Wealth, and the Rentier State</h2>
+      <div class="section-rule"></div>
+      <p>The economic benefits of hydrocarbon wealth enabled some of the most rapid modernization processes in recorded history. Oil revenues account, on average, for 70 percent of government budgets and 30 percent of GDP across the Gulf Cooperation Council states, financing the construction of entire cities, world-class universities, international airlines, and sovereign wealth funds that own assets in every major economy.</p>
+      <p>Dubai — which has relatively modest oil reserves of its own — leveraged federation revenues from Abu Dhabi to transform itself within a generation from a small fishing port into a global hub for finance, tourism, and logistics, home to one of the world's busiest airports.</p>
+      <p>Political economists describe Gulf states as "rentier states" — governments that derive income primarily from natural resource rents rather than taxes on citizens, a structure that fundamentally alters the relationship between rulers and the governed. In return for subsidized fuel, free healthcare, education, and public-sector employment, citizens accept limited political participation. Migrant workers — who perform the majority of physical and service labor — receive none of these benefits and remain excluded from the social contract that oil revenues finance, creating a two-tier system that has drawn sustained international scrutiny.</p>
+    </div>
+
+    <div class="pullquote">
+      <p>"The increase in oil prices led to an increase of oil revenues and the consolidation of autocratic regimes. Oil was considered by these ruling elites as the core of their regimes' existence and the foundation of their economic prosperity."</p>
+      <cite>— Hertog et al., Circular Economy and Sustainability (Springer, 2021)</cite>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Section 3</div>
+      <h2>The Resource Curse and the Drive to Diversify</h2>
+      <div class="section-rule"></div>
+      <p>Despite generating enormous wealth, oil dependency carries profound structural risks — a phenomenon scholars call the "resource curse" or the "paradox of plenty." When global oil prices fell sharply in 2014 and 2015, Saudi Arabia's fiscal deficit surged from 2.3 percent of GDP in 2013 to 15 percent by 2016. Kuwait lost approximately 30 percent of its GDP in the same period. Gulf states that had promised cradle-to-grave welfare systems suddenly found themselves rolling back subsidies and, in some cases, taxing citizens for the first time in history.</p>
+      <p>These vulnerabilities have intensified pressure for economic diversification. Saudi Arabia's Vision 2030, Qatar's National Vision 2030, and the UAE's Energy Strategy 2050 all aim to build post-oil economies by investing in tourism, technology, renewable energy, and financial services.</p>
+      <p>Scholars caution, however, that genuine diversification — moving beyond petrochemical industries that remain tethered to hydrocarbons — requires institutional reforms that challenge the political foundations of the rentier state itself. Balancing this imperative against the immediate needs of populations dependent on oil-funded welfare is the central economic challenge facing Middle Eastern governments today.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-title">The Power of Oil &amp; Natural Gas in the Middle East</div>
+    <div class="footer-note">Page 2 of 3 &middot; Economic Importance</div>
+  </footer>
+</div>
+
+<!-- ══════════ PAGE 3: POLITICS ══════════ -->
+<div class="page" id="page-p3">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="page-num">Page 3 of 3</div>
+      <h1>Political Power and Global Influence</h1>
+      <p>From the 1973 embargo to the energy transition — how oil became the world's most powerful political instrument.</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section">
+      <div class="section-label">Section 1</div>
+      <h2>Oil and Domestic Power in the Middle East</h2>
+      <div class="section-rule"></div>
+      <p>Control over oil has been one of the primary mechanisms through which Middle Eastern governments have consolidated and maintained political authority. In most democracies, the social contract linking citizens to the state runs through taxation: governments need revenue, which requires economic productivity, which requires a functioning relationship with the people being governed. In Gulf rentier states, that logic runs differently.</p>
+      <p>Because income flows from oil extracted from the ground rather than from taxing a productive population, rulers have less structural need to build democratic accountability. Political scientists call this the "rentier effect" — the use of oil revenues to suppress demands for political reform through a combination of generous welfare spending, subsidized living costs, and well-funded security forces.</p>
+      <p>The pattern is visible across the region's most oil-dependent states. Saudi Arabia, Kuwait, Qatar, and the UAE have all deployed oil revenues to finance the patronage networks and security apparatus that underpin authoritarian or semi-authoritarian governance. Even states with less oil, like Jordan and Egypt, have benefited from Gulf aid flows financed by petrodollars, making the political effects of oil wealth extend beyond its immediate producers.</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="section">
+      <div class="section-label">Section 2</div>
+      <h2>OPEC, Regional Dynamics, and the 1973 Embargo</h2>
+      <div class="section-rule"></div>
+      <p>At the regional level, oil simultaneously created the conditions for collective action and intense rivalry. The Organization of the Petroleum Exporting Countries (OPEC), founded in 1960 by Iran, Iraq, Kuwait, Saudi Arabia, and Venezuela, was initially a mechanism for collective bargaining against the Western "Seven Sisters" — the major oil companies that had dominated production and pricing since the early twentieth century.</p>
+      <p>The consequences of OPEC's power became dramatically clear in October 1973, when Arab OPEC members imposed an oil embargo against the United States and other countries that had supported Israel in the Yom Kippur War. Crude oil prices quadrupled from approximately $3 to nearly $12 per barrel globally. Gasoline prices in the United States rose by up to 40 percent in months. Hours-long queues formed at gas stations across the country as rationing was imposed.</p>
+      <p>The embargo exposed the degree to which industrialized nations had become structurally dependent on Middle Eastern oil, permanently elevating energy security as a core concern of American and European foreign policy. It also shifted control of global oil production from Western companies to state governments in the Middle East — a transformation with consequences still unfolding today.</p>
+    </div>
+
+    <div class="pullquote">
+      <p>"The embargo laid bare one of the foremost challenges confronting U.S. policy in the Middle East: balancing the contradictory demands of unflinching support for Israel and the preservation of close ties to the Arab oil-producing monarchies."</p>
+      <cite>— U.S. Department of State, Office of the Historian</cite>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Section 3</div>
+      <h2>Foreign Intervention, Conflict, and the Future</h2>
+      <div class="section-rule"></div>
+      <p>The global demand for Middle Eastern oil has drawn the world's major powers into deep and sometimes militarily costly entanglements with the region. Britain's covert role in the 1953 coup that reinstated the Shah of Iran — after Prime Minister Mosaddegh nationalized the oil industry — is an early and instructive example of how energy interests have shaped Western interventionism. American military presence in the Persian Gulf, costing estimates exceeding $100 billion per year to maintain, has been explicitly linked to the imperative of keeping shipping lanes open and supply routes secure.</p>
+      <p>The 2003 invasion of Iraq, whatever its stated rationale, was widely understood as connected to control over one of the world's largest oil reserves. Oil has also served as a sanctions instrument: Western restrictions targeting Iranian oil exports more than halved the country's production within years of their imposition.</p>
+      <p>Looking ahead, the global energy transition presents the region with an existential challenge. As renewable energy becomes cheaper and electric vehicles spread, long-term demand for oil faces structural decline. States that have based their social contracts, their regional influence, and their international leverage on hydrocarbon exports must now navigate a world in which that leverage may diminish. How — and whether — they manage that transition will be one of the defining geopolitical stories of the twenty-first century.</p>
+    </div>
+
+    <div class="video-wrap">
+      <div class="video-label">Related Video</div>
+      <iframe src="https://www.youtube.com/embed/NfyLQrHWmZc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Why are Middle East oil supplies critical to the global economy?"></iframe>
+      <div class="video-caption">Al Jazeera (2024): Why Middle East oil supplies remain critical to the global economy</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-title">The Power of Oil &amp; Natural Gas in the Middle East</div>
+    <div class="footer-note">Page 3 of 3 &middot; Political Power &amp; Global Influence</div>
+  </footer>
+</div>
+
+<!-- ══════════ BIBLIOGRAPHY ══════════ -->
+<div class="page" id="page-bib">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="page-num">Reference Page</div>
+      <h1>Bibliography</h1>
+      <p>Academic sources, peer-reviewed journals, and policy papers consulted for this project.</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="bib-section">
+      <div class="bib-section-title">Peer-Reviewed Journals &amp; Book Chapters</div>
+
+      <div class="bib-entry">
+        <div class="bib-num">1</div>
+        <div class="bib-text">
+          <p>Hertog, S., et al. "Economic Diversification Trends in the Gulf: The Case of Saudi Arabia." <em>Circular Economy and Sustainability</em>, Springer Nature, 2021. PMC8397598. <span class="bib-badge">Peer-reviewed</span></p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8397598/" target="_blank">pmc.ncbi.nlm.nih.gov/articles/PMC8397598</a>
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <div class="bib-num">2</div>
+        <div class="bib-text">
+          <p>"Oil Dependency and Democratic Outcomes in the Middle East: A Comparative Analysis." <em>International Politics</em>, Springer Nature, April 2025. <span class="bib-badge">Peer-reviewed</span></p>
+          <a href="https://link.springer.com/article/10.1057/s41311-025-00693-x" target="_blank">link.springer.com/article/10.1057/s41311-025-00693-x</a>
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <div class="bib-num">3</div>
+        <div class="bib-text">
+          <p>Fattouh, B. &amp; Mahadeva, L. "Geopolitics of Oil and Gas in the MENA Region." In <em>Energy Transitions in the Middle East</em>, Springer Nature, 2023. <span class="bib-badge">Peer-reviewed</span></p>
+          <a href="https://link.springer.com/chapter/10.1007/978-3-031-30705-8_5" target="_blank">link.springer.com/chapter/10.1007/978-3-031-30705-8_5</a>
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <div class="bib-num">4</div>
+        <div class="bib-text">
+          <p>"The New Arab Gulf: Economic Diversification in the UAE." In <em>Economic Development in the GCC Countries</em>, Springer Nature, 2022. <span class="bib-badge">Peer-reviewed</span></p>
+          <a href="https://link.springer.com/chapter/10.1007/978-981-19-7796-1_25" target="_blank">link.springer.com/chapter/10.1007/978-981-19-7796-1_25</a>
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <div class="bib-num">5</div>
+        <div class="bib-text">
+          <p>"Measuring the Impacts of Saudi Arabia's Energy Diversification Strategy." <em>Energy Strategy Reviews</em>, ScienceDirect / Elsevier, April 2025. <span class="bib-badge">Peer-reviewed</span></p>
+          <a href="https://www.sciencedirect.com/science/article/pii/S2211467X2500094X" target="_blank">sciencedirect.com/science/article/pii/S2211467X2500094X</a>
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <div class="bib-num">6</div>
+        <div class="bib-text">
+          <p>"The Oilfields of the Middle East." <em>World Petroleum Congress Proceedings</em>, Paper WPC-5805, OnePetro. <span class="bib-badge">Peer-reviewed</span></p>
+          <a href="https://onepetro.org/WPCONGRESS/proceedings-abstract/WPC03/WPC03/WPC-5805/203741" target="_blank">onepetro.org — WPC-5805</a>
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <div class="bib-num">7</div>
+        <div class="bib-text">
+          <p>"The Importance of the Middle East Oil Resource Base." <em>Energy Studies Review</em>, vol. 4, no. 1, McMaster University Press, 1992. <span class="bib-badge">Scholarly journal</span></p>
+          <a href="https://energystudiesreview.ca/article/view/262/576" target="_blank">energystudiesreview.ca/article/view/262/576</a>
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <div class="bib-num">8</div>
+        <div class="bib-text">
+          <p>Bromley, S. "Oil and the Middle East." <em>Middle East Report</em>, Middle East Research and Information Project (MERIP), September 1998. <span class="bib-badge">Scholarly journal</span></p>
+          <a href="https://www.merip.org/1998/09/oil-and-the-middle-east/" target="_blank">merip.org/1998/09/oil-and-the-middle-east</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bib-section">
+      <div class="bib-section-title">Policy Papers &amp; Government Sources <span style="font-weight:300;text-transform:none;letter-spacing:0">(confirm with instructor)</span></div>
+
+      <div class="bib-entry">
+        <div class="bib-num">9</div>
+        <div class="bib-text">
+          <p>Ulrichsen, K. C. "Middle East Outlook: The Energy Transition Roils the Land of Oil." <em>Baker Institute for Public Policy</em>, Rice University, August 2024. <span class="bib-badge">Policy paper</span></p>
+          <a href="https://www.bakerinstitute.org/research/middle-east-outlook-energy-transition-roils-land-oil" target="_blank">bakerinstitute.org</a>
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <div class="bib-num">10</div>
+        <div class="bib-text">
+          <p>"How Economic and Political Factors Drive the Oil Strategy of Gulf Arab States." <em>Baker Institute for Public Policy</em>, Rice University, January 2023. <span class="bib-badge">Policy paper</span></p>
+          <a href="https://www.bakerinstitute.org/research/how-economic-and-political-factors-drive-oil-strategy-gulf-arab-states" target="_blank">bakerinstitute.org</a>
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <div class="bib-num">11</div>
+        <div class="bib-text">
+          <p>Luciani, G. "Economic Diversification in the Gulf: Time to Redouble Efforts." <em>Brookings Institution</em>, March 2022. <span class="bib-badge">Policy paper</span></p>
+          <a href="https://www.brookings.edu/articles/economic-diversification-in-the-gulf-time-to-redouble-efforts/" target="_blank">brookings.edu</a>
+        </div>
+      </div>
+
+      <div class="bib-entry">
+        <div class="bib-num">12</div>
+        <div class="bib-text">
+          <p>U.S. Department of State, Office of the Historian. "Oil Embargo, 1973–1974." <em>Milestones in U.S. Foreign Relations</em>. U.S. Government. <span class="bib-badge">Gov. source</span></p>
+          <a href="https://history.state.gov/milestones/1969-1976/oil-embargo" target="_blank">history.state.gov/milestones/1969-1976/oil-embargo</a>
+        </div>
+      </div>
+
+      <div class="bib-note">Sources 9–12 are policy papers or government documents rather than peer-reviewed journals. Confirm with your instructor which are acceptable for your bibliography before submitting.</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-title">The Power of Oil &amp; Natural Gas in the Middle East</div>
+    <div class="footer-note">12 sources listed &middot; 8 peer-reviewed &middot; 4 policy/government</div>
+  </footer>
+</div>
+
+<!-- ══════════ EXTRA RESOURCES ══════════ -->
+<div class="page" id="page-extra">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="page-num">Supplementary Page</div>
+      <h1>Extra Resources</h1>
+      <p>Documentaries, journalism, media coverage, and books that didn't make the main pages — but are worth your time.</p>
+    </div>
+  </div>
+
+  <div class="content-wide">
+    <div class="section">
+      <div class="section-label">Documentaries &amp; Video</div>
+      <h2>Films &amp; Educational Videos</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="resource-grid">
+      <div class="resource-card">
+        <div class="resource-type">Documentary Film</div>
+        <div class="resource-title">Blood and Oil: The Middle East in World War I</div>
+        <div class="resource-meta">Dir. Marty Callaghan · 2006 · 1h 53min · IMDb 7.5/10</div>
+        <p class="resource-desc">Covers how WWI and the Treaty of Versailles created the modern Middle East and established Western oil interests. Essential background for Page 1.</p>
+        <a class="resource-link" href="https://www.youtube.com/watch?v=jP0evPEsc30" target="_blank">Watch on YouTube →</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-type">Netflix Documentary</div>
+        <div class="resource-title">History 101: Oil and the Middle East</div>
+        <div class="resource-meta">Netflix · 2020 · ~20 min · IMDb 7.0/10</div>
+        <p class="resource-desc">Fast-paced overview asking whether oil has been a blessing or a curse for the region and the world. Good intro viewing before reading Pages 2–3.</p>
+        <a class="resource-link" href="https://www.imdb.com/title/tt12375360/" target="_blank">IMDB Page →</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-type">Educational Video</div>
+        <div class="resource-title">The Oil Wars: How America's Energy Obsession Wrecked the Middle East</div>
+        <div class="resource-meta">Big Think · Eugene Gholz (UT Austin) · 2018</div>
+        <p class="resource-desc">Scholar Eugene Gholz argues that U.S. military involvement in the Middle East has been driven primarily by oil dependency. Pairs with Page 3.</p>
+        <a class="resource-link" href="https://www.youtube.com/watch?v=JH9zjozwNF8" target="_blank">Watch on YouTube →</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-type">News Analysis</div>
+        <div class="resource-title">Why Middle East Oil Supplies Are Critical to the Global Economy</div>
+        <div class="resource-meta">Al Jazeera — Counting the Cost · October 2024</div>
+        <p class="resource-desc">Current affairs analysis: how geopolitical tensions impact oil prices and global supply chains. Links the historical narrative of Pages 1–3 to present day.</p>
+        <a class="resource-link" href="https://www.youtube.com/watch?v=NfyLQrHWmZc" target="_blank">Watch on YouTube →</a>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="section">
+      <div class="section-label">Journalism &amp; Policy Analysis</div>
+      <h2>Articles &amp; Reports</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="resource-grid">
+      <div class="resource-card">
+        <div class="resource-type">Policy Report</div>
+        <div class="resource-title">Chaos in Energy Markets: 50 Years After the 1973 Arab Oil Embargo</div>
+        <div class="resource-meta">Baker Institute for Public Policy · February 2024</div>
+        <p class="resource-desc">Panel discussion and written report on the 50th anniversary of the embargo; examines whether a similar crisis could happen today and the Iran-China oil relationship.</p>
+        <a class="resource-link" href="https://www.bakerinstitute.org/research/chaos-energy-markets-then-and-now-50-years-after-1973-arab-oil-embargo-review" target="_blank">Read Report →</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-type">Industry Analysis</div>
+        <div class="resource-title">100 Years of Middle East Oil and Gas Exploration</div>
+        <div class="resource-meta">MEED (Middle East Economic Digest) · July 2017</div>
+        <p class="resource-desc">Comprehensive retrospective marking a century since the 1908 discovery; covers exploration, nationalization, and the modern energy market. Good for Page 1 depth.</p>
+        <a class="resource-link" href="https://www.meed.com/100-years-of-middle-east-oil-and-gas-exploration" target="_blank">Read Article →</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-type">Diplomatic History</div>
+        <div class="resource-title">Pain at the Pumps: The 1973 Embargo and U.S. Foreign Policy</div>
+        <div class="resource-meta">Association for Diplomatic Studies &amp; Training</div>
+        <p class="resource-desc">First-hand accounts from U.S. diplomats who lived through the 1973 crisis; combines oral history with policy analysis. Vivid primary-source perspective for Page 3.</p>
+        <a class="resource-link" href="https://adst.org/2016/01/pain-at-the-pumps-the-1973-oil-embargo-and-its-effect-on-u-s-foreign-policy/" target="_blank">Read Article →</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-type">Current Analysis</div>
+        <div class="resource-title">The Rentier Divergence: Trajectory of a Post-Oil Arab World</div>
+        <div class="resource-meta">ORF Middle East · January 2026</div>
+        <p class="resource-desc">How Gulf states are splitting into "post-rentier aspirants" and "hyper-rentiers" as energy transitions reshape the region's economic structure. Updates the Page 2 argument.</p>
+        <a class="resource-link" href="https://orfme.org/expert-speak/the-rentier-divergence-trajectory-of-a-post-oil-arab-world/" target="_blank">Read Article →</a>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="section" style="max-width:680px">
+      <div class="section-label">Further Reading</div>
+      <h2>Recommended Books</h2>
+      <div class="section-rule"></div>
+
+      <div class="book-entry">
+        <div class="book-title">The Prize: The Epic Quest for Oil, Money and Power</div>
+        <div class="book-author">Daniel Yergin · Simon &amp; Schuster, 1991 · Pulitzer Prize winner — the definitive history of the global oil industry.</div>
+      </div>
+      <div class="book-entry">
+        <div class="book-title">Blood and Oil: The Dangers and Consequences of America's Dependency on Imported Petroleum</div>
+        <div class="book-author">Michael T. Klare · Metropolitan Books, 2004 · Argues that oil has been the hidden driver of American military strategy.</div>
+      </div>
+      <div class="book-entry">
+        <div class="book-title">A Peace to End All Peace: The Fall of the Ottoman Empire and the Creation of the Modern Middle East</div>
+        <div class="book-author">David Fromkin · Henry Holt, 1989 · Essential history of how WWI-era border drawing created the modern Middle East.</div>
+      </div>
+      <div class="book-entry">
+        <div class="book-title">The Paradox of Plenty: Oil Booms and Petro-States</div>
+        <div class="book-author">Terry Lynn Karl · University of California Press, 1997 · Foundational academic study of the resource curse and rentier state theory.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-title">The Power of Oil &amp; Natural Gas in the Middle East</div>
+    <div class="footer-note">Extra Resources &middot; Documentaries, Journalism &amp; Books</div>
+  </footer>
+</div>
+
+<script>
+function show(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.getElementById('nav-' + id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  return false;
+}
+
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', e => e.preventDefault());
+});
+</script>
+</body>
+</html>
